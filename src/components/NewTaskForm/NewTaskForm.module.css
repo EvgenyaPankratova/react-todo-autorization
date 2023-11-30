@@ -1,0 +1,62 @@
+
+.new_task_form_container{
+    position: absolute;
+    z-index: 50;
+    margin: 0 auto;
+    background-color: rgb(131, 178, 225);
+    color: white;
+    padding: 1rem 1.5rem;
+    
+    border-radius: 1rem;
+    width: 26%;
+    height: 23rem;
+
+
+}
+
+.new_task_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    height: 18rem;
+    
+}
+
+.new_task_form input{
+    padding: 0.4rem;
+   border: none;
+    border-radius: 0.5rem;
+    width: 100%;
+    font-size: 15px;
+ 
+    
+}
+
+.new_task__form_title{
+    margin-bottom: 1rem;
+    font-size: 16px;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: -50px;
+    right: -10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .new_task_form_hidden {
+    visibility: hidden;
+  }
+
+  .new_task_ok_button{
+    padding: 0.3rem;
+   border: none;
+    border-radius: 0.5rem;
+    font-size: 14px;
+    color:rgb(153, 22, 38);
+    cursor: pointer;
+  }

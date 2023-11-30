@@ -1,0 +1,72 @@
+
+.autorisation {
+    border: none;
+    border-radius: 1rem;
+    width: 28%;
+    height: 18rem;
+    background: rgb(131, 178, 225);
+    padding: 1rem 2rem;
+    z-index: 5;
+    margin: 0 auto;
+    position: absolute;
+    z-index: 90;
+    top: 7rem;
+    color: white;
+  }
+  .modal_content {
+    border: none;
+    position: relative;
+    text-align: center;
+    font-size: 14px;
+  }
+    .modal_content_title {
+      font-weight: 600;
+      font-size: 15px;
+    }
+    .modal_content_text {
+      margin-top: 0.3rem;
+      font-size: 12px;
+    }
+
+    .modal_content_text a {
+        color: #010509;
+        border-bottom: 1px dotted #0c1217;
+        text-decoration: none;
+    }
+
+    .modal_content_inputs{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+      height: 4.5rem;
+      
+    }
+
+    .modal_content_inputs input{
+      display: block;
+      border-radius: 0.3rem;
+font-size: 14px;
+outline: none;
+padding: 5px 3px;
+border: 1px solid gray;
+    }
+  
+ 
+  .modal_submit {
+    width: 100%;
+    background-color: #e1133f;
+    padding: 10px 5px;
+    color: white;
+    border-radius: 0.5rem;
+    width: 40%;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+  }
+
+  .autorisation_hidden{
+    visibility: hidden;
+  }
