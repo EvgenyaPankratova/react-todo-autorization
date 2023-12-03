@@ -20,7 +20,7 @@ class UserController {
         res.json(user.rows[0]);
     }
     //обновить данные пользователя
-    async updateUser (req, res){
+    async updateUser (req, res, next){
         const {id, first_name, last_name} = req.body;
         const person = await db.query('UPDATE person set first_name = $1, last_name = $2 where id = $3 RETURNING *', [first_name, last_name, id])
         res.json(person.rows[0]);

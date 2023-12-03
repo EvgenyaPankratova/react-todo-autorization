@@ -1,5 +1,6 @@
 const db = require('../db/db');
 
+
 class TaskController{
     //создать задачу
     async createTask(req, res){
@@ -11,8 +12,15 @@ class TaskController{
     async getTasksByUser(req, res){
         const id = req.query.id
         const tasks = await db.query(`select * from task where creator_id = $1`, [id])
-        res.json(tasks.rows)
+        res.json(tasks.rows);
     }
+//получить все задачи
+    async getAllTasks(req, res){
+        const {title, description_task, finished, created, updated, priority_task, status_task, creator_id, responsible_id} = req.body
+        const tasks = await db.query(`select * from task`)
+        res.json(tasks.rows);
+    }
+
 //обновить задачу
     async updateTask(req, res){
         const {id, title, description_task, finished, updated, priority_task, status_task} = req.body;
