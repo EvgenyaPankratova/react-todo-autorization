@@ -13,10 +13,16 @@ class UserController {
         res.json(users.rows);
 
     }
-//получить одного пользователя
+    //получить одного пользователяпо id
     async getOneUser (req, res) {
         const id = req.params.id
-        const user = await db.query('SELECT * FROM person where id = $1', [id]);
+        const user = await db.query(`SELECT * FROM person WHERE id = $1`, [id]);
+        res.json(user.rows[0]);
+    }
+    //получить одного пользователя по логину
+    async getOneUserByLogin (req, res) {
+        const login_person = req.params.login_person
+        const user = await db.query(`SELECT * FROM person WHERE login_person = $1`, [login_person]);
         res.json(user.rows[0]);
     }
     //обновить данные пользователя

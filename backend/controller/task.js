@@ -16,7 +16,7 @@ class TaskController{
     }
 //получить все задачи
     async getAllTasks(req, res){
-        const {title, description_task, finished, created, updated, priority_task, status_task, creator_id, responsible_id} = req.body
+        
         const tasks = await db.query(`select * from task`)
         res.json(tasks.rows);
     }
